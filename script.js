@@ -8,13 +8,33 @@ form.addEventListener("submit", function(e) {
     e.preventDefault();
 
 
-    const formData = new FormData(form);
+    const data = {
 
-    const data = {};
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
 
-    formData.forEach((value, key) => {
-        data[key] = value;
-    });
+        reason: document.getElementById("reason").value,
+        reasonOther: document.getElementById("reasonOther").value,
+
+        quality: document.getElementById("quality").value,
+
+        value: document.getElementById("value").value,
+
+        price: document.getElementById("price").value,
+
+        offers: document.getElementById("offers").value,
+
+        service: document.getElementById("service").value,
+
+        like: document.getElementById("like").value,
+        likeOther: document.getElementById("likeOther").value,
+
+        recommend: document.getElementById("recommend").value,
+        recommendReason: document.getElementById("recommendReason").value,
+
+        improvement: document.getElementById("improvement").value
+
+    };
 
 
     fetch(scriptURL, {
@@ -25,6 +45,7 @@ form.addEventListener("submit", function(e) {
 
     })
 
+
     .then(response => {
 
         alert("Thank you for your valuable feedback!");
@@ -33,11 +54,12 @@ form.addEventListener("submit", function(e) {
 
     })
 
+
     .catch(error => {
 
         alert("Something went wrong. Please try again.");
 
-        console.error(error);
+        console.error("Error:", error);
 
     });
 
