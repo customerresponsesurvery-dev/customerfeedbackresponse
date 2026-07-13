@@ -1,51 +1,144 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Customer Survey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<title>Customer Feedback Survey</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
 <div class="container">
-  <h1>Customer Feedback Survey</h1>
-  <p>Help us understand your experience</p>
 
-  <form id="surveyForm">
+<h1>Customer Feedback Survey</h1>
 
-    <div class="row">
 
-      <div class="input-box">
-        <label>Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-      </div>
+<form id="surveyForm">
 
-      <div class="input-box">
-        <label>Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-      </div>
 
-      <div class="input-box">
-        <label>Experience</label>
-        <select id="experience">
-          <option>Excellent</option>
-          <option>Good</option>
-          <option>Average</option>
-          <option>Poor</option>
-        </select>
-      </div>
+<label>1. What is the main reason you choose this store over others?</label>
 
-    </div>
+<select name="reason">
+<option>Select option</option>
+<option>Product Quality</option>
+<option>Price</option>
+<option>Variety of Products</option>
+<option>Customer Service</option>
+<option>Location Convenience</option>
+<option>Other</option>
+</select>
 
-    <div class="input-box full">
-      <label>Your Feedback</label>
-      <textarea id="feedback" placeholder="Write your feedback..."></textarea>
-    </div>
+<textarea name="reasonOther" placeholder="If other, please specify"></textarea>
 
-    <button type="submit">Submit Survey</button>
 
-  </form>
+
+<label>2. How would you rate the quality of the products?</label>
+
+<select name="quality">
+<option>Select rating</option>
+<option>Excellent</option>
+<option>Good</option>
+<option>Average</option>
+<option>Poor</option>
+</select>
+
+
+
+<label>3. Do you feel the products provide good value for money?</label>
+
+<select name="value">
+<option>Select option</option>
+<option>Yes, definitely</option>
+<option>Somewhat</option>
+<option>No</option>
+</select>
+
+
+
+<label>4. How do you find the prices compared to other stores?</label>
+
+<select name="price">
+<option>Select option</option>
+<option>Lower than other stores</option>
+<option>Similar to other stores</option>
+<option>Higher than other stores</option>
+<option>Not sure</option>
+</select>
+
+
+
+<label>5. Do offers, discounts, or festival sales affect your buying decisions?</label>
+
+<select name="offers">
+<option>Select option</option>
+<option>Yes, a lot</option>
+<option>Sometimes</option>
+<option>Not much</option>
+<option>Never</option>
+</select>
+
+
+
+<label>6. How would you rate the service provided by the staff?</label>
+
+<select name="service">
+<option>Select rating</option>
+<option>Excellent</option>
+<option>Good</option>
+<option>Average</option>
+<option>Poor</option>
+</select>
+
+
+
+<label>7. What do you like most about this store?</label>
+
+<select name="like">
+<option>Select option</option>
+<option>Price</option>
+<option>Product Quality</option>
+<option>Variety</option>
+<option>Service</option>
+<option>Offers & Discounts</option>
+<option>Other</option>
+</select>
+
+<textarea name="likeOther" placeholder="If other, please specify"></textarea>
+
+
+
+<label>8. Would you recommend this store to others? Why?</label>
+
+<select name="recommend">
+<option>Select option</option>
+<option>Yes</option>
+<option>Maybe</option>
+<option>No</option>
+</select>
+
+<textarea name="recommendReason" placeholder="Explain your reason"></textarea>
+
+
+
+<label>9. What improvements would you suggest for this store?</label>
+
+<textarea name="improvement" placeholder="Write your suggestions here"></textarea>
+
+
+
+<button type="submit">Submit</button>
+
+
+</form>
+
+
 </div>
+
 
 <script src="script.js"></script>
 
