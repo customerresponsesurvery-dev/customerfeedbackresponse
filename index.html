@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Customer Feedback Survey</title>
@@ -10,13 +11,18 @@
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
+
 <h1>Customer Feedback Survey</h1>
 
+
 <form id="surveyForm">
+
 
 <label>Customer Name</label>
 <input type="text" name="name" placeholder="Enter your name" required>
@@ -26,7 +32,9 @@
 <input type="email" name="email" placeholder="Enter your email" required>
 
 
+
 <label>1. What is the main reason you choose this store over others?</label>
+
 <select name="reason" required>
 <option value="">Select option</option>
 <option>Product Quality</option>
@@ -40,7 +48,10 @@
 <textarea name="reasonOther" placeholder="If other, please specify"></textarea>
 
 
+
+
 <label>2. How would you rate the quality of the products?</label>
+
 <select name="quality" required>
 <option value="">Select rating</option>
 <option>Excellent</option>
@@ -50,7 +61,10 @@
 </select>
 
 
+
+
 <label>3. Do you feel the products provide good value for money?</label>
+
 <select name="value" required>
 <option value="">Select option</option>
 <option>Yes, definitely</option>
@@ -59,7 +73,10 @@
 </select>
 
 
+
+
 <label>4. How do you find the prices compared to other stores?</label>
+
 <select name="price" required>
 <option value="">Select option</option>
 <option>Lower than other stores</option>
@@ -69,7 +86,10 @@
 </select>
 
 
+
+
 <label>5. Do offers, discounts, or festival sales affect your buying decisions?</label>
+
 <select name="offers" required>
 <option value="">Select option</option>
 <option>Yes, a lot</option>
@@ -79,7 +99,10 @@
 </select>
 
 
+
+
 <label>6. How would you rate the service provided by the staff?</label>
+
 <select name="service" required>
 <option value="">Select rating</option>
 <option>Excellent</option>
@@ -89,7 +112,10 @@
 </select>
 
 
+
+
 <label>7. What do you like most about this store?</label>
+
 <select name="like" required>
 <option value="">Select option</option>
 <option>Price</option>
@@ -103,7 +129,10 @@
 <textarea name="likeOther" placeholder="If other, please specify"></textarea>
 
 
+
+
 <label>8. How often do you visit this store?</label>
+
 <select name="visit" required>
 <option value="">Select option</option>
 <option>First time</option>
@@ -113,22 +142,32 @@
 </select>
 
 
+
+
 <label>9. What improvements would you like to see in the store?</label>
+
 <textarea name="improvement" placeholder="Write your suggestion"></textarea>
+
+
 
 
 <button type="submit" class="submit-btn">
 Submit Survey
 </button>
 
+
 </form>
 
+
 <p id="message"></p>
+
 
 </div>
 
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
