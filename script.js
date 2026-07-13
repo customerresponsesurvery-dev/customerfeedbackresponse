@@ -1,23 +1,13 @@
-function submitSurvey(){
+const form = document.getElementById("surveyForm");
 
-let name=document.getElementById("name").value;
-let email=document.getElementById("email").value;
-let rating=document.getElementById("rating").value;
-let feedback=document.getElementById("feedback").value;
+form.addEventListener("submit", function(event) {
 
+    event.preventDefault();
 
-if(name=="" || email=="" || feedback==""){
-document.getElementById("message").innerHTML="Please fill all details";
-return;
-}
+    // Thank you message
+    alert("Thank you for your valuable feedback!");
 
+    // Clear the form for next customer
+    form.reset();
 
-document.getElementById("message").innerHTML=
-"Thank you "+name+"! Your response has been submitted.";
-
-console.log({
-name,
-email,
-rating,
-feedback
 });
