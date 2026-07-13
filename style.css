@@ -212,15 +212,3 @@ textarea:focus {
     }
 
 }
-
-input,
-select,
-textarea {
-    background: #1a1a1a !important;
-    color: white !important;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: #cccccc !important;
-}
