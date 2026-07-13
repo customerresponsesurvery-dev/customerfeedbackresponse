@@ -1,13 +1,44 @@
 const form = document.getElementById("surveyForm");
 
-form.addEventListener("submit", function(event) {
+const scriptURL = "https://script.google.com/macros/s/AKfycbzeX_l4b1CEmS7kI_jMAwX6_7cO7DTgSSsAa0vwsALfDzvPnXqjt8A-3_beTDlG6ueW/exec";
 
-    event.preventDefault();
 
-    // Thank you message
-    alert("Thank you for your valuable feedback!");
+form.addEventListener("submit", function(e) {
 
-    // Clear the form for next customer
-    form.reset();
+    e.preventDefault();
+
+
+    const formData = new FormData(form);
+
+    const data = {};
+
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+
+    fetch(scriptURL, {
+
+        method: "POST",
+
+        body: JSON.stringify(data)
+
+    })
+
+    .then(response => {
+
+        alert("Thank you for your valuable feedback!");
+
+        form.reset();
+
+    })
+
+    .catch(error => {
+
+        alert("Something went wrong. Please try again.");
+
+        console.error(error);
+
+    });
 
 });
