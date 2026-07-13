@@ -1,6 +1,6 @@
 const form = document.getElementById("surveyForm");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbx1crjjUkqEJ6_VqjTpr__PkWkmzyXuGsOcSMS0BvZ22xdHouuBraJWszj3KffI7Ht2/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbxXFyZ8hyTONa5Xl_ynnRSBfxoG3nN1TClBauH0DNnEO55ELBj6SxXc1uYvrqQ5YzLv/exec";
 
 const message = document.getElementById("message");
 
