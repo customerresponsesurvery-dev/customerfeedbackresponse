@@ -1,90 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  background: linear-gradient(135deg, #141e30, #243b55);
   min-height: 100vh;
+
+  font-family: 'Poppins', Arial, sans-serif;
+
+  background:
+  radial-gradient(circle at top left, #3a2a0a, transparent 35%),
+  radial-gradient(circle at bottom right, #1b3a4b, transparent 35%),
+  linear-gradient(135deg, #050505, #1a1a1a);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 30px;
 }
 
-/* Glass luxury card */
-.container {
-  width: 85%;
-  max-width: 950px;
-  padding: 40px;
-  border-radius: 30px;
 
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(15px);
+/* Luxury glass card */
+
+.container {
+
+  width: 90%;
+  max-width: 950px;
+
+  padding: 45px;
+
+  border-radius: 35px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,215,100,0.25);
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,0.8),
+  inset 0 0 40px rgba(255,215,100,0.05);
+
+}
+
+
+/* Heading */
+
+h1 {
+
+  text-align: center;
+
+  color: #f5d76e;
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 40px;
+
+  text-shadow:
+  0 0 15px rgba(245,215,110,0.5);
+
+}
+
+
+
+/* Questions */
+
+label {
+
+  display: block;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  margin-top: 25px;
+
+}
+
+
+
+/* Input fields */
+
+select,
+textarea {
+
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 16px;
+
+
+  border-radius: 18px;
+
+
+  background:
+  rgba(255,255,255,0.12);
+
 
   border: 1px solid rgba(255,255,255,0.25);
 
-  box-shadow:
-    0 25px 60px rgba(0,0,0,0.5),
-    inset 0 0 30px rgba(255,255,255,0.08);
-}
-
-h1 {
-  text-align: center;
-  color: #ffffff;
-  font-size: 36px;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-}
-
-/* Input boxes */
-input, textarea, select {
-  width: 100%;
-  padding: 15px;
-  margin: 12px 0;
-
-  background: rgba(255,255,255,0.15);
-
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 15px;
 
   color: white;
+
+
   font-size: 15px;
+
+
   outline: none;
+
+
+  transition: 0.3s;
+
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: #ddd;
-}
 
-input:focus,
-textarea:focus,
-select:focus {
+
+select:hover,
+textarea:hover {
+
   border-color: #f5d76e;
-  box-shadow: 0 0 15px rgba(245,215,110,0.5);
+
 }
 
 
-/* Premium button */
+
+select:focus,
+textarea:focus {
+
+  border-color: #f5d76e;
+
+  box-shadow:
+  0 0 20px rgba(245,215,110,0.35);
+
+}
+
+
+
+select option {
+
+  color: black;
+
+}
+
+
+
+textarea {
+
+  height: 90px;
+
+  resize: none;
+
+}
+
+
+
+textarea::placeholder {
+
+  color: #cccccc;
+
+}
+
+
+
+/* Button */
+
 button {
+
   display: block;
-  margin: 25px auto 0;
 
-  background: linear-gradient(135deg,#f5d76e,#c9a227);
+  margin: 40px auto 0;
 
-  color:#111;
 
-  padding:15px 45px;
+  padding: 16px 60px;
 
-  border:none;
-  border-radius:40px;
 
-  font-size:16px;
-  font-weight:bold;
+  border-radius: 50px;
 
-  cursor:pointer;
 
-  transition:0.3s;
+  border: none;
+
+
+  background:
+  linear-gradient(135deg,#f5d76e,#b8860b);
+
+
+  color: #111;
+
+
+  font-size: 17px;
+
+
+  font-weight: 700;
+
+
+  cursor: pointer;
+
+
+  letter-spacing: 1px;
+
+
+  transition: 0.4s;
+
+
+  box-shadow:
+  0 10px 30px rgba(245,215,110,0.3);
+
 }
+
+
 
 button:hover {
-  transform:translateY(-3px);
-  box-shadow:0 15px 30px rgba(245,215,110,0.5);
+
+  transform: translateY(-5px) scale(1.05);
+
+
+  box-shadow:
+  0 20px 45px rgba(245,215,110,0.5);
+
+}
+
+
+
+/* Mobile view */
+
+@media(max-width:600px){
+
+.container{
+
+padding:25px;
+
+width:100%;
+
+}
+
+
+h1{
+
+font-size:28px;
+
+}
+
 }
