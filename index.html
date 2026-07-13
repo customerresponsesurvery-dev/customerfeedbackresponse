@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Customer Response Survey</title>
-<link rel="stylesheet" href="style.css">
+  <title>Customer Survey</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
+  <h1>Customer Feedback Survey</h1>
+  <p>Help us understand your experience</p>
 
-<h1>Customer Feedback Survey</h1>
+  <form id="surveyForm">
 
-<label>Name</label>
-<input id="name" type="text" placeholder="Enter your name">
+    <div class="row">
 
-<label>Email</label>
-<input id="email" type="email" placeholder="Enter email">
+      <div class="input-box">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
 
-<label>How was your experience?</label>
+      <div class="input-box">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
 
-<select id="rating">
-<option>Excellent</option>
-<option>Good</option>
-<option>Average</option>
-<option>Poor</option>
-</select>
+      <div class="input-box">
+        <label>Experience</label>
+        <select id="experience">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Average</option>
+          <option>Poor</option>
+        </select>
+      </div>
 
-<label>Your feedback</label>
-<textarea id="feedback" placeholder="Write your feedback"></textarea>
+    </div>
 
-<button onclick="submitSurvey()">Submit</button>
+    <div class="input-box full">
+      <label>Your Feedback</label>
+      <textarea id="feedback" placeholder="Write your feedback..."></textarea>
+    </div>
 
-<p id="message"></p>
+    <button type="submit">Submit Survey</button>
 
+  </form>
 </div>
 
 <script src="script.js"></script>
