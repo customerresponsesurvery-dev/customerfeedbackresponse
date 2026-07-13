@@ -1,6 +1,6 @@
 const form = document.getElementById("surveyForm");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbzeX_l4b1CEmS7kI_jMAwX6_7cO7DTgSSsAa0vwsALfDzvPnXqjt8A-3_beTDlG6ueW/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbx1crjjUkqEJ6_VqjTpr__PkWkmzyXuGsOcSMS0BvZ22xdHouuBraJWszj3KffI7Ht2/exec";
 
 
 form.addEventListener("submit", function(e) {
