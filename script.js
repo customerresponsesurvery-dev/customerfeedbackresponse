@@ -2,65 +2,76 @@ const form = document.getElementById("surveyForm");
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbx1crjjUkqEJ6_VqjTpr__PkWkmzyXuGsOcSMS0BvZ22xdHouuBraJWszj3KffI7Ht2/exec";
 
+const message = document.getElementById("message");
+
 
 form.addEventListener("submit", function(e) {
 
     e.preventDefault();
 
 
-    const data = {
+    const submitBtn = document.querySelector(".submit-btn");
 
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
 
-        reason: document.getElementById("reason").value,
-        reasonOther: document.getElementById("reasonOther").value,
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Submitting...";
 
-        quality: document.getElementById("quality").value,
 
-        value: document.getElementById("value").value,
-
-        price: document.getElementById("price").value,
-
-        offers: document.getElementById("offers").value,
-
-        service: document.getElementById("service").value,
-
-        like: document.getElementById("like").value,
-        likeOther: document.getElementById("likeOther").value,
-
-        recommend: document.getElementById("recommend").value,
-        recommendReason: document.getElementById("recommendReason").value,
-
-        improvement: document.getElementById("improvement").value
-
-    };
+    const formData = new FormData(form);
 
 
     fetch(scriptURL, {
 
         method: "POST",
 
-        body: JSON.stringify(data)
+        body: formData
 
     })
 
 
-    .then(response => {
+    .then(response => response.text())
 
-        alert("Thank you for your valuable feedback!");
 
+    .then(data => {
+
+
+        message.innerText = "Survey submitted successfully!";
+
+
+        // Automatically clear the form for next customer
         form.reset();
+
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerText = "Submit Survey";
+
+
+        setTimeout(function() {
+
+            message.innerText = "";
+
+        }, 3000);
+
 
     })
 
 
     .catch(error => {
 
-        alert("Something went wrong. Please try again.");
 
         console.error("Error:", error);
 
+
+        message.innerText = "Something went wrong. Please try again.";
+
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerText = "Submit Survey";
+
+
     });
+
 
 });
