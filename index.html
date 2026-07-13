@@ -19,16 +19,15 @@
 <form id="surveyForm">
 
 <label>Customer Name</label>
-<input type="text" id="name" name="name" placeholder="Enter your name" required>
+<input type="text" name="name" placeholder="Enter your name" required>
 
 
 <label>Email Address</label>
-<input type="email" id="email" name="email" placeholder="Enter your email" required>
+<input type="email" name="email" placeholder="Enter your email" required>
 
 
 <label>1. What is the main reason you choose this store over others?</label>
-
-<select name="reason" id="reason" required>
+<select name="reason" required>
 <option value="">Select option</option>
 <option>Product Quality</option>
 <option>Price</option>
@@ -38,12 +37,11 @@
 <option>Other</option>
 </select>
 
-<textarea name="reasonOther" id="reasonOther" placeholder="If other, please specify"></textarea>
+<textarea name="reasonOther" placeholder="If other, please specify"></textarea>
 
 
 <label>2. How would you rate the quality of the products?</label>
-
-<select name="quality" id="quality" required>
+<select name="quality" required>
 <option value="">Select rating</option>
 <option>Excellent</option>
 <option>Good</option>
@@ -53,8 +51,7 @@
 
 
 <label>3. Do you feel the products provide good value for money?</label>
-
-<select name="value" id="value" required>
+<select name="value" required>
 <option value="">Select option</option>
 <option>Yes, definitely</option>
 <option>Somewhat</option>
@@ -63,8 +60,7 @@
 
 
 <label>4. How do you find the prices compared to other stores?</label>
-
-<select name="price" id="price" required>
+<select name="price" required>
 <option value="">Select option</option>
 <option>Lower than other stores</option>
 <option>Similar to other stores</option>
@@ -74,8 +70,7 @@
 
 
 <label>5. Do offers, discounts, or festival sales affect your buying decisions?</label>
-
-<select name="offers" id="offers" required>
+<select name="offers" required>
 <option value="">Select option</option>
 <option>Yes, a lot</option>
 <option>Sometimes</option>
@@ -85,8 +80,7 @@
 
 
 <label>6. How would you rate the service provided by the staff?</label>
-
-<select name="service" id="service" required>
+<select name="service" required>
 <option value="">Select rating</option>
 <option>Excellent</option>
 <option>Good</option>
@@ -96,8 +90,7 @@
 
 
 <label>7. What do you like most about this store?</label>
-
-<select name="like" id="like" required>
+<select name="like" required>
 <option value="">Select option</option>
 <option>Price</option>
 <option>Product Quality</option>
@@ -107,4 +100,35 @@
 <option>Other</option>
 </select>
 
-<textarea name="likeOther" id="likeOther" placeholder="If other, please specify"></textarea>
+<textarea name="likeOther" placeholder="If other, please specify"></textarea>
+
+
+<label>8. How often do you visit this store?</label>
+<select name="visit" required>
+<option value="">Select option</option>
+<option>First time</option>
+<option>Weekly</option>
+<option>Monthly</option>
+<option>Occasionally</option>
+</select>
+
+
+<label>9. What improvements would you like to see in the store?</label>
+<textarea name="improvement" placeholder="Write your suggestion"></textarea>
+
+
+<button type="submit" class="submit-btn">
+Submit Survey
+</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
