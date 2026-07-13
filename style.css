@@ -22,7 +22,7 @@ body {
 }
 
 
-/* Luxury glass card */
+/* Luxury Glass Card */
 
 .container {
 
@@ -44,6 +44,7 @@ body {
   inset 0 0 40px rgba(255,215,100,0.05);
 
 }
+
 
 
 /* Heading */
@@ -69,7 +70,7 @@ h1 {
 
 
 
-/* Questions */
+/* Question Labels */
 
 label {
 
@@ -87,8 +88,9 @@ label {
 
 
 
-/* Input fields */
+/* Name, Email, Dropdown, Text Area */
 
+input,
 select,
 textarea {
 
@@ -97,7 +99,6 @@ textarea {
   margin-top: 10px;
 
   padding: 16px;
-
 
   border-radius: 18px;
 
@@ -124,6 +125,20 @@ textarea {
 
 
 
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+
+  color: #cccccc;
+
+}
+
+
+
+/* Hover Effect */
+
+input:hover,
 select:hover,
 textarea:hover {
 
@@ -133,6 +148,9 @@ textarea:hover {
 
 
 
+/* Focus Effect */
+
+input:focus,
 select:focus,
 textarea:focus {
 
@@ -145,6 +163,8 @@ textarea:focus {
 
 
 
+/* Dropdown Options */
+
 select option {
 
   color: black;
@@ -152,6 +172,8 @@ select option {
 }
 
 
+
+/* Text Box */
 
 textarea {
 
@@ -163,15 +185,7 @@ textarea {
 
 
 
-textarea::placeholder {
-
-  color: #cccccc;
-
-}
-
-
-
-/* Button */
+/* Submit Button */
 
 button {
 
@@ -230,7 +244,7 @@ button:hover {
 
 
 
-/* Mobile view */
+/* Mobile */
 
 @media(max-width:600px){
 
