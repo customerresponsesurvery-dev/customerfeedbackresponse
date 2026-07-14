@@ -1,7 +1,7 @@
 const form = document.getElementById("surveyForm");
 const message = document.getElementById("message");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbxXFyZ8hyTONa5Xl_ynnRSBfxoG3nN1TClBauH0DNnEO55ELBj6SxXc1uYvrqQ5YzLv/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycby8C2JiJoUb7oyEdfm4cztjr-4aeci61SWCuSHLvwhQVHl0UOluF2NsYTbz1gQ1uHAG/exec
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
