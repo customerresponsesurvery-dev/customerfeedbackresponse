@@ -1,77 +1,48 @@
 const form = document.getElementById("surveyForm");
+const message = document.getElementById("message");
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbxXFyZ8hyTONa5Xl_ynnRSBfxoG3nN1TClBauH0DNnEO55ELBj6SxXc1uYvrqQ5YzLv/exec";
 
-const message = document.getElementById("message");
-
-
-form.addEventListener("submit", function(e) {
-
+form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-
     const submitBtn = document.querySelector(".submit-btn");
-
-
     submitBtn.disabled = true;
     submitBtn.innerText = "Submitting...";
 
-
+    // Convert form data to JSON
     const formData = new FormData(form);
-
+    const data = Object.fromEntries(formData.entries());
 
     fetch(scriptURL, {
-
         method: "POST",
-
-        body: formData
-
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
     })
-
-
-    .then(response => response.text())
-
-
-    .then(data => {
-
-
-        message.innerText = "Survey submitted successfully!";
-
-
-        // Automatically clear the form for next customer
-        form.reset();
-
-
-        submitBtn.disabled = false;
-
-        submitBtn.innerText = "Submit Survey";
-
-
-        setTimeout(function() {
-
-            message.innerText = "";
-
-        }, 3000);
-
-
+    .then(response => response.json())
+    .then(result => {
+        if (result.status === "success") {
+            message.style.color = "green";
+            message.innerText = "Survey submitted successfully!";
+            form.reset();
+        } else {
+            message.style.color = "red";
+            message.innerText = "Submission failed.";
+        }
     })
-
-
     .catch(error => {
-
-
-        console.error("Error:", error);
-
-
+        console.error(error);
+        message.style.color = "red";
         message.innerText = "Something went wrong. Please try again.";
-
-
+    })
+    .finally(() => {
         submitBtn.disabled = false;
-
         submitBtn.innerText = "Submit Survey";
 
-
+        setTimeout(() => {
+            message.innerText = "";
+        }, 3000);
     });
-
-
 });
